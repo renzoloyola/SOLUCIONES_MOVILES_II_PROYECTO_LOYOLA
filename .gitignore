@@ -1,0 +1,37 @@
+# Secretos
+*.jks
+*.keystore
+*.p12
+*.mobileprovision
+.env
+.env.*
+google-services.json
+GoogleService-Info.plist
+secrets.properties
+local.properties
+
+# Build
+build/
+**/build/
+.gradle/
+DerivedData/
+*.xcuserstate
+node_modules/
+.dart_tool/
+Pods/
+out/
+
+# Android / Kotlin
+.kotlin/
+captures/
+.externalNativeBuild/
+.cxx/
+*.apk
+*.aab
+
+# IDE / Sistema
+.idea/
+.vscode/
+*.iml
+.DS_Store
+Thumbs.db
