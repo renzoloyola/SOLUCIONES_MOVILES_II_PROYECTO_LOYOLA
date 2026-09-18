@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.app.changescout.ui.viewmodel.ConectividadTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-09-18T21:43:22.587Z" hostname="DESKTOP-UMJ3U8J" time="0.2">
+  <properties/>
+  <testcase name="b_socketException_sinConexion_apagaSpinner" classname="com.app.changescout.ui.viewmodel.ConectividadTest" time="0.11"/>
+  <testcase name="a_demoraDe4Segundos_timeoutA3Segundos_apagaSpinner" classname="com.app.changescout.ui.viewmodel.ConectividadTest" time="0.087"/>
+  <system-out><![CDATA[PASS (b): SocketException -> Sin conexion; spinner=false; 1 llamada, 0 reintentos.
+PASS (a): doble demora 4000 ms; limite 3000 ms; Tiempo agotado; spinner=false; 0 reintentos.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

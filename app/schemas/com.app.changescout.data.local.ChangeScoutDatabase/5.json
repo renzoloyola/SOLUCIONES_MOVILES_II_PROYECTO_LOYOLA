@@ -1,0 +1,283 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 5,
+    "identityHash": "d1eeb101afd925a144b5fc2ae6bdc85a",
+    "entities": [
+      {
+        "tableName": "productos_importados",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `usuarioId` TEXT NOT NULL, `nombre` TEXT NOT NULL, `queryCompetencia` TEXT NOT NULL, `precioFobUsd` REAL NOT NULL, `fleteUsd` REAL NOT NULL, `seguroUsd` REAL NOT NULL, `arancelesUsd` REAL NOT NULL, `otrosCargosUsd` REAL NOT NULL, `cantidadDisponible` INTEGER NOT NULL, `notas` TEXT)",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "usuarioId",
+            "columnName": "usuarioId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "nombre",
+            "columnName": "nombre",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "queryCompetencia",
+            "columnName": "queryCompetencia",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "precioFobUsd",
+            "columnName": "precioFobUsd",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "fleteUsd",
+            "columnName": "fleteUsd",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "seguroUsd",
+            "columnName": "seguroUsd",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "arancelesUsd",
+            "columnName": "arancelesUsd",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "otrosCargosUsd",
+            "columnName": "otrosCargosUsd",
+            "affinity": "REAL",
+            "notNull": true
+          },
+          {
+            "fieldPath": "cantidadDisponible",
+            "columnName": "cantidadDisponible",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "notas",
+            "columnName": "notas",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "id"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_productos_importados_usuarioId",
+            "unique": false,
+            "columnNames": [
+              "usuarioId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_productos_importados_usuarioId` ON `${TABLE_NAME}` (`usuarioId`)"
+          }
+        ]
+      },
+      {
+        "tableName": "evaluaciones_comerciales",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`evaluacionId` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `usuarioId` TEXT NOT NULL, `productoId` INTEGER NOT NULL, `costoTotalUsd` REAL, `costoTotalPen` REAL, `tipoCambioVentaUsdPen` REAL, `precioPromedioRealPen` REAL, `margenObjetivoPct` REAL, `precioVentaSugeridoPen` REAL, `brechaPrecioSugeridoMercadoPct` REAL, `competidoresValidos` INTEGER NOT NULL, `margenNetoPct` REAL, `erosionPrecioLocalPct` REAL, `variacionCompetidoresPct` REAL, `presionCambiariaPct` REAL, `ventanaHistoricaDias` INTEGER, `veredicto` TEXT, `estadoEvaluacion` TEXT NOT NULL, `evaluadoEnEpochMillis` INTEGER NOT NULL, `versionAlgoritmo` TEXT NOT NULL, `trazaProveedor` TEXT, `motivoEvidenciaInsuficiente` TEXT, FOREIGN KEY(`productoId`) REFERENCES `productos_importados`(`id`) ON UPDATE NO ACTION ON DELETE CASCADE )",
+        "fields": [
+          {
+            "fieldPath": "evaluacionId",
+            "columnName": "evaluacionId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "usuarioId",
+            "columnName": "usuarioId",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "productoId",
+            "columnName": "productoId",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "costoTotalUsd",
+            "columnName": "costoTotalUsd",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "costoTotalPen",
+            "columnName": "costoTotalPen",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "tipoCambioVentaUsdPen",
+            "columnName": "tipoCambioVentaUsdPen",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "precioPromedioRealPen",
+            "columnName": "precioPromedioRealPen",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "margenObjetivoPct",
+            "columnName": "margenObjetivoPct",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "precioVentaSugeridoPen",
+            "columnName": "precioVentaSugeridoPen",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "brechaPrecioSugeridoMercadoPct",
+            "columnName": "brechaPrecioSugeridoMercadoPct",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "competidoresValidos",
+            "columnName": "competidoresValidos",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "margenNetoPct",
+            "columnName": "margenNetoPct",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "erosionPrecioLocalPct",
+            "columnName": "erosionPrecioLocalPct",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "variacionCompetidoresPct",
+            "columnName": "variacionCompetidoresPct",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "presionCambiariaPct",
+            "columnName": "presionCambiariaPct",
+            "affinity": "REAL"
+          },
+          {
+            "fieldPath": "ventanaHistoricaDias",
+            "columnName": "ventanaHistoricaDias",
+            "affinity": "INTEGER"
+          },
+          {
+            "fieldPath": "veredicto",
+            "columnName": "veredicto",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "estadoEvaluacion",
+            "columnName": "estadoEvaluacion",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "evaluadoEnEpochMillis",
+            "columnName": "evaluadoEnEpochMillis",
+            "affinity": "INTEGER",
+            "notNull": true
+          },
+          {
+            "fieldPath": "versionAlgoritmo",
+            "columnName": "versionAlgoritmo",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "trazaProveedor",
+            "columnName": "trazaProveedor",
+            "affinity": "TEXT"
+          },
+          {
+            "fieldPath": "motivoEvidenciaInsuficiente",
+            "columnName": "motivoEvidenciaInsuficiente",
+            "affinity": "TEXT"
+          }
+        ],
+        "primaryKey": {
+          "autoGenerate": true,
+          "columnNames": [
+            "evaluacionId"
+          ]
+        },
+        "indices": [
+          {
+            "name": "index_evaluaciones_comerciales_usuarioId",
+            "unique": false,
+            "columnNames": [
+              "usuarioId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_evaluaciones_comerciales_usuarioId` ON `${TABLE_NAME}` (`usuarioId`)"
+          },
+          {
+            "name": "index_evaluaciones_comerciales_productoId",
+            "unique": false,
+            "columnNames": [
+              "productoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_evaluaciones_comerciales_productoId` ON `${TABLE_NAME}` (`productoId`)"
+          },
+          {
+            "name": "index_evaluaciones_comerciales_usuarioId_productoId",
+            "unique": false,
+            "columnNames": [
+              "usuarioId",
+              "productoId"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_evaluaciones_comerciales_usuarioId_productoId` ON `${TABLE_NAME}` (`usuarioId`, `productoId`)"
+          },
+          {
+            "name": "index_evaluaciones_comerciales_productoId_evaluadoEnEpochMillis",
+            "unique": false,
+            "columnNames": [
+              "productoId",
+              "evaluadoEnEpochMillis"
+            ],
+            "orders": [],
+            "createSql": "CREATE INDEX IF NOT EXISTS `index_evaluaciones_comerciales_productoId_evaluadoEnEpochMillis` ON `${TABLE_NAME}` (`productoId`, `evaluadoEnEpochMillis`)"
+          }
+        ],
+        "foreignKeys": [
+          {
+            "table": "productos_importados",
+            "onDelete": "CASCADE",
+            "onUpdate": "NO ACTION",
+            "columns": [
+              "productoId"
+            ],
+            "referencedColumns": [
+              "id"
+            ]
+          }
+        ]
+      }
+    ],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'd1eeb101afd925a144b5fc2ae6bdc85a')"
+    ]
+  }
+}

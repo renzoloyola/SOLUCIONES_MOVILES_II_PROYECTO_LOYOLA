@@ -35,3 +35,15 @@ captures/
 *.iml
 .DS_Store
 Thumbs.db
+
+# Archivos locales y extracciones: no publicar
+/RAR-EXTRAER/
+/ChangeScout/
+/tmp/
+**/bin/
+*.rar
+*.zip
+*.key
+*.pem
+*.tmp
+/app/release/
