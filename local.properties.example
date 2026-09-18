@@ -1,0 +1,10 @@
+# Copia este archivo como local.properties y completa solo valores publicos.
+# Usa la ruta del Android SDK instalada en tu equipo.
+sdk.dir=C\:\\Users\\TU_USUARIO\\AppData\\Local\\Android\\Sdk
+
+# Supabase > Connect o Settings > API Keys.
+SUPABASE_URL=https://TU_PROYECTO.supabase.co
+SUPABASE_PUBLISHABLE_KEY=sb_publishable_REEMPLAZAR
+
+# Dejar vacio mientras el backend de ChangeScout no este desplegado.
+MARKETPLACE_BACKEND_URL=

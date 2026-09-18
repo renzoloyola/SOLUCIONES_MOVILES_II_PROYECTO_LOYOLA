@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.app.changescout.data.auth.LoginTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-09-18T21:14:36.780Z" hostname="DESKTOP-UMJ3U8J" time="0.1">
+  <properties/>
+  <testcase name="b_credencialesValidas_autenticaYGuardaToken" classname="com.app.changescout.data.auth.LoginTest" time="0.046"/>
+  <testcase name="c_backendRechaza_errorSinReintentos" classname="com.app.changescout.data.auth.LoginTest" time="0.049"/>
+  <testcase name="a_estadoInicial_sinSesionActiva" classname="com.app.changescout.data.auth.LoginTest" time="0.001"/>
+  <system-out><![CDATA[(b) OK: estado Exito, sesion activa y tokens guardados; 1 llamada.
+(c) OK: estado Fallo tras HTTP 400; sin sesion ni token; 1 llamada, 0 reintentos.
+(a) OK: servicio nuevo sin sesion, sin token y con 0 llamadas.
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
